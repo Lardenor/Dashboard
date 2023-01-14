@@ -1,0 +1,24 @@
+/* stylelint-disable */
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$url}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: $style;
+  }
+}
+@mixin menu_list($weight,$size,$color){
+  font-family: "Lexend-Regular";
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+@mixin menu_list_op ($color,$opacity){
+    font-family: "Lexend-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: $color;
+    opacity: $opacity;
+}

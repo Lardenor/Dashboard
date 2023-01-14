@@ -1,0 +1,107 @@
+@include lg {
+  // .nav{
+  //     display: none;
+  // }
+ 
+  .wrapper {
+    margin-left: 280px;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+
+  // .logo_text{
+  //     color: white;
+  //     display: block;
+  // }
+  .menu-btn {
+    display: none;
+  }
+
+  nav {
+    padding: 0;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    border-radius: 30px;
+    // flex-direction: column;
+    // Rozmir
+    max-height: 960px;
+    height: 100%;
+    width: 268px;
+    background: $black;
+  }
+
+  nav ul {
+    height: 100%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    width: 236px;
+    margin: 0 16px;
+
+    &:nth-child(8) {
+      margin-top: 30px;
+      @media (min-height: 800px) {
+        margin-top: 80px;
+      }
+      @media (min-height: 900px) {
+        margin-top: 150px;
+      }
+      @media (min-height: 950px) {
+        margin-top: 220px;
+      }
+    }
+    &:nth-child(9) {
+      margin-bottom: 54%;
+
+      @media (min-height: 800px) {
+      }
+
+      @media (min-height: 900px) {
+      }
+    }
+  }
+
+  nav ul li a {
+    padding: 8px;
+  }
+
+  // ? ========================  =============================
+
+  .logo_main_menu {
+    padding: 39px 0 71px 32px;
+  }
+
+  // Tochka vozvrata fsfs
+  // ================== SEARCH=========================
+
+  form {
+    display: none;
+  }
+ .header{
+    margin-top: 48px;
+    display: flex;
+        justify-content: space-between;
+        .text_header{
+            border: none;
+            align-items: flex-start;   
+            
+           gap: 8px;
+            h3 {
+                    @include menu_list(600, 20px, $black)
+                }
+            
+                span {
+                    @include menu_list_op($black,0.4)
+                    
+                }
+        }
+ } 
+ #input_search_header{
+    display: block;
+ }
+}

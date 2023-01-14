@@ -1,0 +1,321 @@
+
+.leftbar{
+    
+    display: none;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text_menu_burger {
+    font-family: "Lexend-regular";
+    font-weight: 400;
+    font-size: 16px;
+
+    color: $white;
+    padding-right: 10px;
+    display: none;
+}
+
+//  ======================== ALL CONTENT =============================
+.menu-btn {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    position: fixed;
+    z-index: 100;
+
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: $black;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 40px;
+    flex-wrap: wrap;
+
+}
+
+
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    // position: relative;
+    // z-index: 100;
+
+}
+
+nav ul li {
+
+    margin: 0 5px;
+
+    &:nth-child(1) {
+        margin-top: 20px;
+    }
+
+    &:nth-child(8) {
+        margin-top: 60px;
+    }
+
+    padding: 4px 10px;
+}
+
+nav ul li a {
+
+    height: 50px;
+    border-radius: 10px;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+// nav ul li a.active,
+// nav ul li a:hover {
+
+//     background: #fff;
+// }
+
+nav .menu-btn i {
+    color: $white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+nav ul li a.active,
+nav ul li a:hover {
+    position: relative;
+    background: $blue;
+    font-weight: 600;
+    transition: all 0.5s ease;
+
+    &::after {
+        position: absolute;
+        right: 9px;
+        content: url('../components/Line.svg');
+        width: 4px;
+        height: 26px;
+        background: #f2f2f2;
+        border-radius: 1.5px;
+
+
+
+    }
+
+}
+
+
+
+
+
+// ? ========================  =============================
+
+li {
+
+    a {
+        font-family: "Lexend-regular";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: $white;
+
+        .main_menu_text {
+
+            padding-left: 12px;
+        }
+
+        display: flex;
+        align-items: center;
+
+
+        .main_menu_icon {
+            img {
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.logo_main_menu {
+
+    display: flex;
+    align-items: center;
+
+    .logo_main_img {
+        img {
+            display: block;
+        }
+
+    }
+
+    .logo_text {
+        display: none;
+    }
+
+}
+
+
+// ================== SEARCH=========================
+
+form {
+    color: #555;
+    display: flex;
+    padding: 2px;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    font-family: "Lexend-regular"
+}
+
+input[type="search"] {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 7px 8px;
+    font-weight: 400;
+    font-size: 16px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    width: 90px;
+
+}
+
+input[type="search"]::placeholder {
+    color: #bbb;
+}
+
+button[type="submit"] {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+
+
+    background: #bbb url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+button[type="submit"]:hover {
+    opacity: 1;
+}
+
+button[type="submit"]:focus,
+input[type="search"]:focus {
+    box-shadow: 0 0 3px 0 #1183d6;
+    border-color: #1183d6;
+    outline: none;
+}
+
+// ? ======================== MEDIA =============================
+@media (min-width: 570px) {
+    input[type="search"] {
+
+        width: 215px;
+
+    }
+}
+
+@media (min-width: 425px) {
+    .nav .logo .logo_text {
+        display: block;
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 30px;
+
+        padding-left: 10px;
+
+        a {
+            color: $white;
+        }
+
+    }
+
+    .text_menu_burger {
+        display: inline;
+    }
+
+
+
+}
+
+@media (max-width: 1023px) {
+    nav .menu-btn i {
+        display: block;
+    }
+
+    #click:checked~.menu-btn i:before {
+        content: "\f00d";
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: $black;
+        height: 100vh;
+        width: 268px;
+
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 10px 0;
+
+    }
+
+    nav ul li a {
+        width: 100%;
+        margin-left: -100%;
+        padding: 0 15px;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    #click:checked~ul li a {
+        margin-left: 0px;
+    }
+
+
+}
+
+// Tochka vozvrata fsfssfsfsaf
+// Tochka voz-vra-faewr fwe

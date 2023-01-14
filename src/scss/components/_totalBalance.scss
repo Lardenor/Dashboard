@@ -1,0 +1,83 @@
+
+.main_block{
+
+    width: 93%;
+    .totalBalance{
+    display: flex;
+    flex-direction: column;
+    // ===========================HEADER
+    .main_header_text{
+        margin-bottom: 16px;
+        h2{
+        @include menu_list(600, 28px, $black);
+        }
+       .main_header_bottom_text{
+        padding-top: 14px;
+        display: flex;
+        align-items: center;
+        .header_bottom_text {
+@include menu_list(400, 16px, $balanceColor);
+opacity: 0.3;
+        }
+        
+        .header_bottom_arrow {
+            .arrow {
+                    @extend %arrow;
+                }
+        }
+       }
+    }
+    
+    }
+}
+
+
+// ===========================HEADER
+// *==========================Middle
+.main_middle_balance {
+    margin-bottom: 24px ;
+    .count_balance {
+@include menu_list(700, 50px, $balanceColor);
+span{
+    color: $blue;
+}
+    }
+    
+        .wallet_id {
+            padding-top: 8px;
+            @include menu_list_op ($balanceColor,0.3);
+        }
+}
+
+
+// *==========================Middle
+//? =============================Button ?
+.button{
+    display: flex;
+    flex-wrap: wrap;
+gap: 20px;
+margin-bottom: 60px
+
+}
+.btn_dark {
+    @extend %btn;
+    background-color: $black;
+    color: $white;
+
+    &:hover {
+        background-color: mix($black, $white, 50%);
+        color: mix($white, $black, 20%);
+    }
+}
+
+.btn_ligth {
+   
+    @extend %btn;
+    opacity: 0.7;
+    color: $black;
+
+    &:hover {
+        background-color: mix($black, $white, 80%);
+        color: mix($white, $black, 80%);
+    }
+}

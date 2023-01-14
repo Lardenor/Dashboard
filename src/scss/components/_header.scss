@@ -1,0 +1,29 @@
+.header {
+       
+margin: 120px 0 87px;
+width: 93%;
+    .text_header {
+       @include colum-center;
+       gap: 20px;
+       padding-bottom: 50px;
+border-bottom: $line 1px solid;
+        h3{
+@include menu_list(600, 40px, $black)
+        }
+        span{
+@include menu_list(400, 26px, $black)
+        }
+    }
+}
+#input_search_header{
+width: 100%;
+       @extend %input;
+       width: 275px;
+       height: 50px;
+        background-image: url("../img/icons/other/search.svg");
+        background-repeat: no-repeat;
+        background-position-x: 97%;
+        background-position-y: 50%;
+        margin-bottom: 16px;
+        display: none;
+}  

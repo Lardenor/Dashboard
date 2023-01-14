@@ -1,0 +1,157 @@
+.recent_transactions_container{
+    margin-bottom: 80px;
+width: 93%;
+.recent_transactions {
+    margin-bottom: 45px;
+   @include align-center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+.recent_transactions_header_text {
+    @include menu_list(600, 26px, $black);
+}
+
+    .recent_transactions_view {
+        @include align-center;
+        padding-right: 15px
+    }
+
+    .recent_transactions_view_text {
+        @include menu_list(400, 16px, $black);
+    }
+
+    .recent_transactions_view_arrow {
+        padding-left: 4px;
+        .arrow{
+            @extend %arrow;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// todo ============================================= TABLE
+.recent_transactions_tablet{
+    div {
+    
+            height: 300px;
+            overflow-x: auto;
+            width: 100%;
+    
+    
+        }
+    
+        table {
+            border-collapse: collapse;
+            text-align: left;
+            min-width: 600px;
+            width: 100%;
+    
+        }
+    
+        tr>th, td {
+            
+            padding: 25px 50px 25px 0;
+            white-space: nowrap;
+           
+        }
+    
+        th {
+            background-color: $white;
+    
+        }
+    
+        //  tr {
+           
+        //     // border-bottom: 1px solid #EFEFF5;
+          
+        // }
+       
+    tr{
+        position: relative;
+        &::after{
+            position: absolute;
+            border-bottom: 1px solid $line;
+            width: 93%;
+            bottom: 0;
+            left: 0;
+            content: "";
+            
+        }
+    }
+        th>span {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 14px;
+    
+        }
+    
+    
+        .number_transactions{
+            padding-top: 3px;
+        }
+
+.Date_tablet {
+    @include menu_list(400, 16px, $black);
+}
+
+.amount_tablet {
+    @include menu_list(500, 16px, $black);
+}
+
+.status {
+    @include menu_list(400, 16px, $green);
+    
+}
+
+.fail {
+    color: $red;
+}
+
+
+
+
+        // *============================ Псевдо класи =======================
+        tr:first-child {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+    
+        th:first-child {
+            position: sticky;
+            left: 0;
+            
+        }
+    
+        td:last-child {
+            padding-right: 20px;
+        }
+    
+        tr:first-child>th {
+            padding-top: 5px;
+        @include menu_list_op ($grey, 0.6);
+        }
+    th{
+        span{
+        &:first-child{
+            @include menu_list(500, 16px, $black);
+        }
+    }
+        span {
+            &:last-child {
+                @include menu_list_op ($black, 0.3);
+                font-size: 14px;
+            }
+        }
+    }
+}
+}

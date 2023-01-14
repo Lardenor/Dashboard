@@ -1,0 +1,21 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "inheritance";
+
+@import "./components/sideBar";
+@import "./components/header";
+@import "./components/totalBalance";
+@import "./components/recentTrans";
+@import "./components/card";
+@import "./components/transfers";
+
+@import "./components/media1024";
+@import "./components/media1280";
+@import "./components/media1440";
+
+
+
+
+

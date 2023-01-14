@@ -1,0 +1,114 @@
+.card_container{
+    @include colum-center;
+    width: 93%;
+    .card_image{
+        margin-bottom: 41px;
+       img{
+        max-width: 390px;
+            width: 100%;
+       }
+    }
+}
+.card_input{
+    max-width: 390px;
+    width: 100%;
+    .input_header{
+        margin-bottom: 28px;
+        @include align-center;
+            justify-content: space-between;
+            .input_header_text{
+@include menu_list(600,24px,black);
+            }
+            .input_header_button{
+                .point{
+                    @extend %arrow;
+                }
+            }
+    }
+   
+}
+
+#number{
+    width: 100%;
+    @extend %input;
+    background-image: url("../img/icons/other/shield.svg");
+    background-repeat: no-repeat;
+    background-position-x: 97%;
+    background-position-y:50% ;
+    margin-bottom: 16px;
+    
+}
+.input_main_bottom{
+    display: flex;
+    width: 100%;
+    margin-bottom: 32px;
+}
+#number_2{
+    max-width: 220px;
+    width: 100%;
+    @extend %input;
+  
+
+}
+
+.input_main_bottom_left{
+    margin-right: 20px;
+}
+.input_main_bottom_right{
+    height: 72px;
+    width: 150px;
+    background-color: $gre_opacity;
+    border-radius: 12px;
+    padding: 10px 12px 11px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+ .input_main_bottom_right_block{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    
+    // margin: 10px 12px 11px 12px;
+ }
+
+.input_main_bottom_right_bottom_block{
+    
+    display: flex;
+        align-items: flex-end;
+        @include menu_list(500,22px,$black);
+        
+}
+.arrow_3{
+    @extend %arrow;
+   
+}
+.input_main_bottom_right_text{
+    @include menu_list_op($black, 0.6);
+    font-size: 14px;
+}
+
+
+// todo=============================
+
+.card_button {
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    .save_adress {
+@extend %arrow;
+align-items: center;
+padding-right: 35px;
+    }
+}
+
+
+
+
+
+
+
+
+
